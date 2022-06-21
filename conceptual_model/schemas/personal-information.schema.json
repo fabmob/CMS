@@ -174,5 +174,52 @@
       ],
       "additionalProperties": false
     },
+    "gender_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "$comment": "ISO/IEC 5218",
+          "enum": [0, 1, 2, 9]
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    },
+    "country_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "$comment": "ISO 3166-1 alpha-3",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    }
   }
 }

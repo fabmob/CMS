@@ -23,9 +23,9 @@
       "$ref": "#/$defs/string_field"
     },
     "gender": {
-      "$comment": "TODO: check if there is standard",
+      "$comment": "TODO: validate if it is the right standard to use",
       "description": "The person's gender",
-      "$ref": "#/$defs/string_field"
+      "$ref": "#/$defs/gender_field"
     },
     "birthDate": {
       "description": "The person's birth date",
@@ -37,7 +37,7 @@
     },
     "birthCountry": {
       "description": "The person's birth country",
-      "$ref": "#/$defs/string_field"
+      "$ref": "#/$defs/country_field"
     }
   },
   "required": [],
@@ -188,5 +188,52 @@
       ],
       "additionalProperties": false
     },
+    "gender_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "$comment": "ISO/IEC 5218",
+          "enum": [0, 1, 2, 9]
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    },
+    "country_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "$comment": "ISO 3166-1 alpha-3",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    }
   }
 }
