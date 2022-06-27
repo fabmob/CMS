@@ -9,19 +9,11 @@
       "description": "The person's email",
       "$ref": "#/$defs/email_field"
     },
-    "workingEmail": {
-      "description": "The person's working email",
-      "$ref": "#/$defs/email_field"
-    },
     "primaryPostalAddress": {
       "description": "The person's primary postal address",
       "$ref": "#/$defs/postal_address_field"
     },
     "secondaryPostalAddress": {
-      "description": "The person's secondary postal address",
-      "$ref": "#/$defs/postal_address_field"
-    },
-    "workingPostalAddress": {
       "description": "The person's secondary postal address",
       "$ref": "#/$defs/postal_address_field"
     },
@@ -31,10 +23,6 @@
     },
     "secondaryPhoneNumber": {
       "description": "The person's secondary phone number",
-      "$ref": "#/$defs/phone_number_field"
-    },
-    "workingPhoneNumber": {
-      "description": "The person's working secondary phone number",
       "$ref": "#/$defs/phone_number_field"
     }
   },
