@@ -38,6 +38,10 @@
     "birthCountry": {
       "description": "The person's birth country",
       "$ref": "#/$defs/country_field"
+    },
+	"status": {
+      "description": "The person's global status",
+      "$ref": "#/$defs/status_field"
     }
   },
   "required": [],
@@ -55,12 +59,15 @@
         "certificationDate": {
           "type": "string",
           "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "value",
-        "source",
-        "certificationDate"
+        "source"
       ],
       "additionalProperties": false
     },
@@ -77,12 +84,15 @@
         "certificationDate": {
           "type": "string",
           "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "value",
-        "source",
-        "certificationDate"
+        "source"
       ],
       "additionalProperties": false
     },
@@ -99,12 +109,15 @@
         "certificationDate": {
           "type": "string",
           "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "value",
-        "source",
-        "certificationDate"
+        "source"
       ],
       "additionalProperties": false
     },
@@ -156,12 +169,15 @@
         "certificationDate": {
           "type": "string",
           "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "value",
-        "source",
-        "certificationDate"
+        "source"
       ],
       "additionalProperties": false
     },
@@ -179,12 +195,15 @@
         "certificationDate": {
           "type": "string",
           "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "value",
-        "source",
-        "certificationDate"
+        "source"
       ],
       "additionalProperties": false
     },
@@ -202,12 +221,15 @@
         "certificationDate": {
           "type": "string",
           "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "value",
-        "source",
-        "certificationDate"
+        "source"
       ],
       "additionalProperties": false
     },
@@ -226,12 +248,40 @@
         "certificationDate": {
           "type": "string",
           "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "value",
-        "source",
-        "certificationDate"
+        "source"
+      ],
+      "additionalProperties": false
+    },
+	"status_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+		  "enum": ["EMPLOYED", "STUDENT", "SELF-EMPLOYED", "RETIREE", "UNEMPLOYED"]
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source"
       ],
       "additionalProperties": false
     }
