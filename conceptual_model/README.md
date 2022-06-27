@@ -14,11 +14,12 @@ if it has been certified.
 We defined for this purpose special data types, each with the following 
 attributes :
 
-| Name              | Type       | Description
-| ------------------|------------|---------------------------------
-| value             | any        | The claim value
-| source            | string     | Source of the data
-| certificationDate | datetime   | If the data was certified, and when.
+| Name                    | Type       | Description
+| ------------------------|------------|------------------------------------------------------------------------------------------
+| value                   | any        | The claim value
+| source                  | string     | Source of the data
+| certificationDate       | datetime   | If the data was certified, and when.
+| certificationExpiryDate | datetime   | If the data was certified, and when the information will no longer valid (if applicable).
 
 See [Field types](field-types.md)
 
