@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "professional-information.schema.json",
+  "title": "Professional Information",
+  "description": "A person's professional information",
+  "type": "object",
+  "properties": {
+    "workingEmail": {
+      "description": "The person's working email",
+      "$ref": "#/$defs/email_field"
+    },
+    "workingPostalAddress": {
+      "description": "The person's secondary postal address",
+      "$ref": "#/$defs/postal_address_field"
+    },
+    "workingPhoneNumber": {
+      "description": "The person's working secondary phone number",
+      "$ref": "#/$defs/phone_number_field"
+    },
+    "employerId": {
+      "description": "The person's employer",
+      "$ref": "#/$defs/string_field"
+    },
+    "employeeId": {
+      "description": "The employee ID in the employer information system",
+      "$ref": "#/$defs/string_field"
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$defs": {
+    "string_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "email_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "email"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "postal_address_field": {
+      "$comment": "Rough implementation of the AFNOR NF Z 10-011 standard",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "object",
+          "properties": {
+            "line1": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line2": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line3": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line4": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line5": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line6": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line7": {
+              "type": "string",
+              "maxLength": 38
+            }
+          },
+          "$comment": "At least first line is expected to be filled",
+          "required": [
+            "line1"
+          ],
+          "additionalProperties": false
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "phone_number_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "$comment": "E.164 standard",
+          "pattern": "^\\+?[1-9]\\d{1,14}$"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "certificationExpiryDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
