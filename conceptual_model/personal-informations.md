@@ -10,7 +10,10 @@ Attributes
 | Name                   | Type     
 | -----------------------|----------
 | email                  | [email](field-types.md#email-field)
+| workingEmail           | [email](field-types.md#email-field)
 | primaryPostalAddress   | [postal-address](field-types.md#postal-address-field)
 | secondaryPostalAddress | [postal-address](field-types.md#postal-address-field)
+| workingPostalAddress   | [postal-address](field-types.md#postal-address-field)
 | primaryPhoneNumber     | [phone number](field-types.md#phone-number-field)
 | secondaryPhoneNumber   | [phone number](field-types.md#phone-number-field)
+| workingPhoneNumber     | [phone number](field-types.md#phone-number-field)
