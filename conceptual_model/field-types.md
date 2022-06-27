@@ -67,3 +67,13 @@
 | source                  | string   | any
 | certificationDate       | string   | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 | certificationExpiryDate | string   | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+
+
+### Status field
+
+| Name                    | Type     | Format
+| ------------------------|----------|---------------------------------
+| value                   | string   | EMPLOYEE &#124; STUDENT &#124; SELF-EMPLOYED &#124; RETIREE &#124; UNEMPLOYED
+| source                  | string   | any
+| certificationDate       | string   | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+| certificationExpiryDate | string   | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
