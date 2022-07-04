@@ -10,7 +10,7 @@ Attributes
 
 | Name                   | Type
 | -----------------------|----------
-| adresses               | Array of [Named address](#named-address)
+| adresses               | Array of [named addresses](#named-address)
 
 
 Definitions
@@ -22,5 +22,5 @@ Definitions
 | Name              | Type                                                  | Required | Format
 | ------------------|-------------------------------------------------------|----------|---------------------------------
 | name              | string                                                | yes      | any
-| value             | [Postal address](field-types.md#postal-address-field) | yes      | -
+| value             | [postal address](field-types.md#postal-address-field) | yes      | -
 

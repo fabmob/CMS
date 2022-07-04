@@ -30,5 +30,6 @@ Main Entities
 - [Personal Informations](personal-informations.md)
 - [Civil status](civil-status.md)
 - [Favorites](favorites.md)
+- [Driving Licence](driving-licence.md)
 
 
