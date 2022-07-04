@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "personal-information.schema.json",
+  "title": "Personal Information",
+  "description": "A person's information",
+  "type": "object",
+  "properties": {
+    "email": {
+      "description": "The person's email",
+      "$ref": "#/$defs/email_field"
+    },
+    "primaryPostalAddress": {
+      "description": "The person's primary postal address",
+      "$ref": "#/$defs/postal_address_field"
+    },
+    "secondaryPostalAddress": {
+      "description": "The person's secondary postal address",
+      "$ref": "#/$defs/postal_address_field"
+    },
+    "primaryPhoneNumber": {
+      "description": "The person's primary phone number",
+      "$ref": "#/$defs/phone_number_field"
+    },
+    "secondaryPhoneNumber": {
+      "description": "The person's secondary phone number",
+      "$ref": "#/$defs/phone_number_field"
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$defs": {
+    "string_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    },
+    "date_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "date"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    },
+    "email_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "email"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    },
+    "postal_address_field": {
+      "$comment": "Rough implementation of the AFNOR NF Z 10-011 standard",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "object",
+          "properties": {
+            "line1": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line2": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line3": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line4": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line5": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line6": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line7": {
+              "type": "string",
+              "maxLength": 38
+            }
+          },
+          "$comment": "At least first line is expected to be filled",
+          "required": [
+            "line1"
+          ],
+          "additionalProperties": false
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    },
+    "phone_number_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "$comment": "E.164 standard",
+          "pattern": "^\\+?[1-9]\\d{1,14}$"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    },
+    "gender_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "$comment": "ISO/IEC 5218",
+          "enum": [0, 1, 2, 9]
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    },
+    "country_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "$comment": "ISO 3166-1 alpha-3",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "source",
+        "certificationDate"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
