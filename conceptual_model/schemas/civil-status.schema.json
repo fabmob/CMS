@@ -18,10 +18,6 @@
       "description": "The person's middle names, separated by spaces",
       "$ref": "#/$defs/string_field"
     },
-    "title": {
-      "description": "The person's title",
-      "$ref": "#/$defs/string_field"
-    },
     "gender": {
       "$comment": "TODO: validate if it is the right standard to use",
       "description": "The person's gender",
