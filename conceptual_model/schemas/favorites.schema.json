@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "favorites.schema.json",
+  "title": "Personal Routing Favorites",
+  "description": "A person's favorite routing information",
+  "type": "object",
+  "properties": {
+    "addresses": {
+      "description": "The person's favorite addresses",      
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/named_address_field"
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$defs": {
+    "string_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "date_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "date"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "email_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "email"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "postal_address_field": {
+      "$comment": "Rough implementation of the AFNOR NF Z 10-011 standard",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "object",
+          "properties": {
+            "line1": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line2": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line3": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line4": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line5": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line6": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line7": {
+              "type": "string",
+              "maxLength": 38
+            }
+          },
+          "$comment": "At least first line is expected to be filled",
+          "required": [
+            "line1"
+          ],
+          "additionalProperties": false
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "named_address_field": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The address name, like Home, Work..."
+        },
+        "value": {
+          "type": "string",
+          "description": "The address",
+          "$ref": "#/$defs/postal_address_field"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "phone_number_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "$comment": "E.164 standard",
+          "pattern": "^\\+?[1-9]\\d{1,14}$"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "gender_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "$comment": "ISO/IEC 5218",
+          "enum": [0, 1, 2, 9]
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "city_field": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "inseeValue": {
+          "type": "string",
+          "$comment": "French INSEE code for cities",
+          "minLength": 5,
+          "maxLength": 5
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "oneOf": [
+        {
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "required": [
+                "inseeValue"
+            ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "country_field": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "isoValue": {
+          "type": "string",
+          "$comment": "ISO 3166-1 alpha-3",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "oneOf": [
+        {
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "required": [
+                "isoValue"
+            ]
+        }
+      ],
+      "additionalProperties": false
+    }
+  }
+}
