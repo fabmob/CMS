@@ -1,0 +1,384 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fr-dgfip-information.schema.json",
+  "title": "Personal French DGFIP information",
+  "description": "A person's French DGFIP information",
+  "$comment": "TODO: improve information on tax notices, add information of persons attached to declarants",
+  "type": "object",
+  "properties": {  
+    "declarant1": {
+      "description": "The first declarant information",
+      "$ref": "#/$defs/dgfip_identity_field"
+    },
+    "declarant2": {
+      "description": "The second declarant information",
+      "$ref": "#/$defs/dgfip_identity_field"
+    },
+    "taxNotices": {
+      "description": "Tax notices",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/dgfip_tax_notice_field"
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$defs": {
+    "dgfip_tax_notice_field": {
+      "type": "object",
+      "properties": {
+        "declarationYear": {
+          "description": "The declaration year",
+          "$ref": "#/$defs/integer_field"
+        },
+        "numberOfShares": {
+          "description": "The number of shares",
+          "$ref": "#/$defs/integer_field"
+        },
+        "grossIncome": {
+          "description": "The overall gross income",
+          "$ref": "#/$defs/number_field"
+        },
+        "taxableIncome": {
+          "description": "The taxable income",
+          "$ref": "#/$defs/number_field"
+        },
+        "referenceTaxIncome": {
+          "description": "The reference tax income",
+          "$ref": "#/$defs/number_field"
+        },
+        "taxAmount": {
+          "description": "The tax amount",
+          "$ref": "#/$defs/number_field"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "dgfip_identity_field": {
+      "type": "object",
+      "properties": {
+        "lastName": {
+          "description": "The person's last name",
+          "$ref": "#/$defs/string_field"
+        },
+        "birthName": {
+          "description": "The person's last name",
+          "$ref": "#/$defs/string_field"
+        },
+        "firstName": {
+          "description": "The person's first name",
+          "$ref": "#/$defs/string_field"
+        },
+        "middleNames": {
+          "$comment": "TODO: check if this is the right model",
+          "description": "The person's middle names, separated by spaces",
+          "$ref": "#/$defs/string_field"
+        },
+        "birthDate": {
+          "description": "The person's birth date",
+          "$ref": "#/$defs/date_field"
+        },
+        "birthPlace": {
+          "description": "The person's birth place / city",
+          "$ref": "#/$defs/city_field"
+        },
+        "birthCountry": {
+          "description": "The person's birth country",
+          "$ref": "#/$defs/country_field"
+        },
+        "email": {
+          "description": "The person's email",
+          "$ref": "#/$defs/email_field"
+        },
+        "primaryPostalAddress": {
+          "description": "The person's primary postal address",
+          "$ref": "#/$defs/postal_address_field"
+        },
+        "secondaryPostalAddress": {
+          "description": "The person's secondary postal address",
+          "$ref": "#/$defs/postal_address_field"
+        },
+        "primaryPhoneNumber": {
+          "description": "The person's primary phone number",
+          "$ref": "#/$defs/phone_number_field"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "string_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "date_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "date"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "integer_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "number_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "email_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "email"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "postal_address_field": {
+      "$comment": "Rough implementation of the AFNOR NF Z 10-011 standard",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "object",
+          "properties": {
+            "line1": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line2": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line3": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line4": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line5": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line6": {
+              "type": "string",
+              "maxLength": 38
+            },
+            "line7": {
+              "type": "string",
+              "maxLength": 38
+            }
+          },
+          "$comment": "At least first line is expected to be filled",
+          "required": [
+            "line1"
+          ],
+          "additionalProperties": false
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "phone_number_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "$comment": "E.164 standard",
+          "pattern": "^\\+?[1-9]\\d{1,14}$"
+        },
+        "mobile": {
+          "type": "boolean",
+          "$comment": "if the telephone is mobile, meaning it can receive SMS"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value",
+        "mobile"
+      ],
+      "additionalProperties": false
+    },
+    "gender_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "$comment": "ISO/IEC 5218",
+          "enum": [0, 1, 2, 9]
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "city_field": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "inseeValue": {
+          "type": "string",
+          "$comment": "French INSEE code for cities",
+          "minLength": 5,
+          "maxLength": 5
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "oneOf": [
+        {
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "required": [
+                "inseeValue"
+            ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "country_field": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "isoValue": {
+          "type": "string",
+          "$comment": "ISO 3166-1 alpha-3",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "oneOf": [
+        {
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "required": [
+                "isoValue"
+            ]
+        }
+      ],
+      "additionalProperties": false
+    }
+  }
+}
