@@ -3,6 +3,7 @@
   "$id": "driving-license.schema.json",
   "title": "Personal Driving License",
   "description": "A person's driving license information",
+  "$comment": "TODO: add license type",
   "type": "object",
   "properties": {
     "number": {
