@@ -20,11 +20,34 @@
     "issuingCountry": {
       "description": "The person's driving license issuing country",
       "$ref": "#/$defs/country_field"
+    },
+    "invalid": {
+      "description": "If the person's driving license is invalid",
+      "$ref": "#/$defs/boolean_field"
     }
   },
   "required": [],
   "additionalProperties": false,
   "$defs": {
+    "boolean_field": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
     "string_field": {
       "type": "object",
       "properties": {
