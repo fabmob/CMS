@@ -32,5 +32,8 @@ Main Entities
 - [Favorites](favorites.md)
 - [Driving Licence](driving-licence.md)
 - [ICE Contacts](in-case-of-emergency-contacts.md)
+- [French CAF Informations](fr-caf-informations.md)
+- [French DGFIP Informations](fr-dgfip-informations.md)
+- [French MESRI Informations](fr-mesri-informations.md)
 
 

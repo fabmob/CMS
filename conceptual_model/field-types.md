@@ -16,6 +16,23 @@
 | certificationDate | string   | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
 
+### Integer field
+
+| Name              | Type     | Required | Format
+| ------------------|----------|----------|----------------------
+| value             | integer  | yes      | -
+| source            | string   | no       | any
+| certificationDate | string   | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+
+
+### Number field
+
+| Name              | Type     | Required | Format
+| ------------------|----------|----------|----------------------
+| value             | number   | yes      | -
+| source            | string   | no       | any
+| certificationDate | string   | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+
 ### Date field
 
 | Name              | Type     | Required | Format
