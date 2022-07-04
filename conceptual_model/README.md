@@ -31,5 +31,6 @@ Main Entities
 - [Civil status](civil-status.md)
 - [Favorites](favorites.md)
 - [Driving Licence](driving-licence.md)
+- [ICE Contacts](in-case-of-emergency-contacts.md)
 
 
