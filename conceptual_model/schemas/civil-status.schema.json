@@ -198,7 +198,10 @@
     "country_field": {
       "type": "object",
       "properties": {
-        "value": {
+        "name": {
+          "type": "string"
+        },
+        "isoValue": {
           "type": "string",
           "$comment": "ISO 3166-1 alpha-3",
           "minLength": 3,
@@ -212,8 +215,17 @@
           "format": "date-time"
         }
       },
-      "required": [
-        "value"
+      "oneOf": [
+        {
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "required": [
+                "isoValue"
+            ]
+        }
       ],
       "additionalProperties": false
     }
