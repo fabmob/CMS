@@ -161,6 +161,10 @@
           "$comment": "E.164 standard",
           "pattern": "^\\+?[1-9]\\d{1,14}$"
         },
+        "mobile": {
+          "type": "boolean",
+          "$comment": "if the telephone is mobile, meaning it can receive SMS"
+        },
         "source": {
           "type": "string"
         },
@@ -170,7 +174,8 @@
         }
       },
       "required": [
-        "value"
+        "value",
+        "mobile"
       ],
       "additionalProperties": false
     },
