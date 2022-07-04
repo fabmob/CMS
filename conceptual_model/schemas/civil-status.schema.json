@@ -54,9 +54,7 @@
         }
       },
       "required": [
-        "value",
-        "source",
-        "certificationDate"
+        "value"
       ],
       "additionalProperties": false
     },
@@ -76,9 +74,7 @@
         }
       },
       "required": [
-        "value",
-        "source",
-        "certificationDate"
+        "value"
       ],
       "additionalProperties": false
     },
@@ -98,9 +94,7 @@
         }
       },
       "required": [
-        "value",
-        "source",
-        "certificationDate"
+        "value"
       ],
       "additionalProperties": false
     },
@@ -155,9 +149,7 @@
         }
       },
       "required": [
-        "value",
-        "source",
-        "certificationDate"
+        "value"
       ],
       "additionalProperties": false
     },
@@ -178,9 +170,7 @@
         }
       },
       "required": [
-        "value",
-        "source",
-        "certificationDate"
+        "value"
       ],
       "additionalProperties": false
     },
@@ -201,9 +191,7 @@
         }
       },
       "required": [
-        "value",
-        "source",
-        "certificationDate"
+        "value"
       ],
       "additionalProperties": false
     },
@@ -225,9 +213,7 @@
         }
       },
       "required": [
-        "value",
-        "source",
-        "certificationDate"
+        "value"
       ],
       "additionalProperties": false
     }
