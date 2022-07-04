@@ -40,6 +40,7 @@
 | Name              | Type     | Required | Format
 | ------------------|----------|----------|---------------------------------
 | value             | string   | yes      | [E.164 Standard](https://www.itu.int/rec/T-REC-E.164/)
+| mobile            | boolean  | yes      | -
 | source            | string   | no       | any
 | certificationDate | string   | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
