@@ -17,4 +17,4 @@ Attributes
 | birthDate              | [date](field-types.md#date-field)
 | birthPlace             | [string](field-types.md#string-field)
 | birthCountry           | [country](field-types.md#country-field)
-
+| status                 | [string](field-types.md#string-field)
