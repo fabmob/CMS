@@ -29,7 +29,7 @@
     },
     "birthPlace": {
       "description": "The person's birth place / city",
-      "$ref": "#/$defs/string_field"
+      "$ref": "#/$defs/city_field"
     },
     "birthCountry": {
       "description": "The person's birth country",
@@ -192,6 +192,40 @@
       },
       "required": [
         "value"
+      ],
+      "additionalProperties": false
+    },
+    "city_field": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "inseeValue": {
+          "type": "string",
+          "$comment": "French INSEE code for cities",
+          "minLength": 5,
+          "maxLength": 5
+        },
+        "source": {
+          "type": "string"
+        },
+        "certificationDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "oneOf": [
+        {
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "required": [
+                "inseeValue"
+            ]
+        }
       ],
       "additionalProperties": false
     },
