@@ -17,8 +17,8 @@ attributes :
 | Name              | Type       | Description
 | ------------------|------------|---------------------------------
 | value             | any        | The claim value
-| source            | string     | Source of the data
-| certificationDate | datetime   | If the data was certified, and when.
+| source            | string     | where Data was captured. If it was certified, the certification authority becomes the source of the Data. Source is a domain name (standardized)
+| certificationDate | datetime   | If the Data was certified, and when.
 
 Some additional attributes may be defined for some fields. See
 [Field types](field-types.md).
