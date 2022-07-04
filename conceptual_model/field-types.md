@@ -1,8 +1,16 @@
+### Boolean field
+
+| Name              | Type     | Required | Format
+| ------------------|----------|----------|----------------------
+| value             | boolean  | yes      | -
+| source            | string   | no       | any
+| certificationDate | string   | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+
 
 ### String field
 
 | Name              | Type     | Required | Format
-| ------------------|----------|---------------------------------
+| ------------------|----------|----------|----------------------
 | value             | string   | yes      | any
 | source            | string   | no       | any
 | certificationDate | string   | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
