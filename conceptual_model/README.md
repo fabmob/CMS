@@ -20,7 +20,8 @@ attributes :
 | source            | string     | Source of the data
 | certificationDate | datetime   | If the data was certified, and when.
 
-See [Field types](field-types.md)
+Some additional attributes may be defined for some fields. See
+[Field types](field-types.md).
 
 
 Main Entities
