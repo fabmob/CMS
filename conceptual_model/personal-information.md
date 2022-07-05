@@ -1,5 +1,5 @@
-Personal Informations
-=====================
+Personal Information
+====================
 
 [JSON Schema](schemas/personal-information.schema.json)
 

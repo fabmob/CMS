@@ -27,13 +27,13 @@ Some additional attributes may be defined for some fields. See
 Main Entities
 -------------
 
-- [Personal Informations](personal-informations.md)
+- [Personal Information](personal-information.md)
 - [Civil status](civil-status.md)
 - [Favorites](favorites.md)
 - [Driving Licence](driving-licence.md)
 - [ICE Contacts](in-case-of-emergency-contacts.md)
-- [French CAF Informations](fr-caf-informations.md)
-- [French DGFIP Informations](fr-dgfip-informations.md)
-- [French MESRI Informations](fr-mesri-informations.md)
+- [French CAF Informations](fr-caf-information.md)
+- [French DGFIP Information](fr-dgfip-information.md)
+- [French MESRI Information](fr-mesri-information.md)
 
 

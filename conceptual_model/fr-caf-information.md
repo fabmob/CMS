@@ -1,10 +1,13 @@
-French CAF Informations
-=======================
+French CAF Information
+======================
 
 Personal French CAF information
 
 [JSON Schema](schemas/fr-caf-information.schema.json)
 
+
+Attributes
+----------
 
 | Name                   | Type     
 | -----------------------|----------

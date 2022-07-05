@@ -1,7 +1,7 @@
-French CAF Informations
-=======================
+French CAF Information
+======================
 
-A person's French DGFIP informations
+A person's French DGFIP information
 
 TODO: improve information on tax notices, add information of persons attached 
 to declarants.

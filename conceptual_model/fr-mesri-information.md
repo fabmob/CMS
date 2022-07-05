@@ -1,10 +1,13 @@
-Personal French MESRI Informations
-==================================
+Personal French MESRI Information
+=================================
 
 A person's French MESRI information
 
 [JSON Schema](schemas/fr-mesri-information.schema.json)
 
+
+Attributes
+----------
 
 | Name                   | Type     
 | -----------------------|----------
