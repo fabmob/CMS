@@ -17,10 +17,11 @@ attributes :
 | Name              | Type       | Description
 | ------------------|------------|---------------------------------
 | value             | any        | The claim value
-| source            | string     | Source of the data
-| certificationDate | datetime   | If the data was certified, and when.
+| source            | string     | where Data was captured. If it was certified, the certification authority becomes the source of the Data. Source is a domain name (standardized)
+| certificationDate | datetime   | If the Data was certified, and when.
 
-See [Field types](field-types.md)
+Some additional attributes may be defined for some fields. See
+[Field types](field-types.md).
 
 
 Main Entities
@@ -28,5 +29,11 @@ Main Entities
 
 - [Personal Informations](personal-informations.md)
 - [Civil status](civil-status.md)
+- [Favorites](favorites.md)
+- [Driving Licence](driving-licence.md)
+- [ICE Contacts](in-case-of-emergency-contacts.md)
+- [French CAF Informations](fr-caf-informations.md)
+- [French DGFIP Informations](fr-dgfip-informations.md)
+- [French MESRI Informations](fr-mesri-informations.md)
 
 

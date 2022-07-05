@@ -37,3 +37,9 @@ Claims
 | ----------------------|--------------------------------------|-------
 | personalInformations  | `urn:cms:personal-informations:read` | [Personal informations](../conceptual_model/personal-informations.md)
 | civilStatus           | `urn:cms:civil-status:read`          | [Civil status](../conceptual_model/civil-status.md)
+| favorites             | `urn:cms:favorites:read`             | [Favorites](../conceptual_model/favorites.md)
+| drivingLicence        | `urn:cms:driving-licence:read`       | [Driving Licence](../conceptual_model/driving-licence.md)
+| ICE                   | `urn:cms:ice-contacts:read`          | [In Case Of Emergency contacts](../conceptual_model/in-case-of-emergency-contacts.md)
+| CAF                   | `urn:cms:fr-caf-informations:read`   | [French CAF Informations](../conceptual_model/fr-caf-informations.md)
+| DGFIP                 | `urn:cms:fr-dgfip-informations:read` | [French DGFIP Informations](../conceptual_model/fr-dgfip-informations.md)
+| MESRI                 | `urn:cms:fr-mesri-informations:read` | [French MESRI Informations](../conceptual_model/fr-mesri-informations.md)
