@@ -12,6 +12,25 @@
       "items": {
         "$ref": "#/$defs/named_address_field"
       }
+    },
+    "transportationModes": {
+      "description": "The person's favorite transportation modes",      
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "pedestrian",          
+          "public-transport",
+          "car",
+          "bicycle",
+          "taxi",
+          "scooter",
+          "motorcycle",
+          "carshare",
+          "train",
+          "coach"
+      ]
+    }
     }
   },
   "required": [],
