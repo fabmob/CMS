@@ -1,7 +1,7 @@
 Driving Licence
 ===============
 
-[JSON Schema](schemas/driving-licence.json)
+[JSON Schema](schemas/driving-licence.schema.json)
 
 
 Attributes

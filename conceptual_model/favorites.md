@@ -11,6 +11,7 @@ Attributes
 | Name                   | Type
 | -----------------------|----------
 | adresses               | Array of [named addresses](#named-address)
+| transportationModes    | Array of strings: <br/>- pedestrian<br/>- public-transport<br/>- car<br/>- bicycle<br/>- taxi<br/>- chauffeur<br/>- scooter<br/>- motorcycle<br/>- carshare<br/>- train<br/>- coach
 
 
 Definitions
