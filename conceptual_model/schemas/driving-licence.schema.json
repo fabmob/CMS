@@ -21,10 +21,6 @@
     "issuingCountry": {
       "description": "The person's driving license issuing country",
       "$ref": "#/$defs/country_field"
-    },
-    "invalid": {
-      "description": "If the person's driving license is invalid",
-      "$ref": "#/$defs/boolean_field"
     }
   },
   "required": [],

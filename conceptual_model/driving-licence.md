@@ -13,4 +13,4 @@ Attributes
 | dateOfIssue            | [date](field-types.md#date-field)
 | dateOfValidity         | [date](field-types.md#date-field)
 | issuingCountry         | [country](field-types.md#country-field)
-| invalid                | [boolean](field-types.md#boolean-field)
+
