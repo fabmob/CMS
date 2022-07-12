@@ -20,7 +20,13 @@
         "type": "string",
         "enum": [
           "pedestrian",          
-          "public-transport",
+          "bus",
+          "metro",
+          "trolleyBus",
+          "tram",
+          "water",
+          "funicular",
+          "cableway",
           "car",
           "bicycle",
           "taxi",
@@ -30,7 +36,8 @@
           "motorcycle",
           "carshare",
           "train",
-          "coach"
+          "coach",
+          "air"
       ]
     }
     }
