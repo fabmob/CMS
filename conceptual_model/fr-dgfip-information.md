@@ -1,12 +1,12 @@
-French CAF Information
-======================
+French DGFIP Information
+========================
 
 A person's French DGFIP information
 
 TODO: improve information on tax notices, add information of persons attached 
 to declarants.
 
-[JSON Schema](schemas/fr-caf-information.schema.json)
+[JSON Schema](schemas/fr-dgfip-information.schema.json)
 
 Attributes
 ----------
