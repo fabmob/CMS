@@ -17,7 +17,7 @@ to ask some specific OAuth2 scopes. Exemples of CMS scopes:
 
 - `urn:cms:personal-informations:read`: read access to the user's basic 
   personal informations
-- `urn:cms:civil-status:read`: read access to the user's civil status
+- `urn:cms:identity:read`: read access to the user's identity
 
 
 Fetching data
@@ -36,7 +36,7 @@ Claims
 | name                  | required scope                       | Schema
 | ----------------------|--------------------------------------|-------
 | personalInformation   | `urn:cms:personal-information:read`  | [Personal information](../conceptual_model/personal-information.md)
-| civilStatus           | `urn:cms:civil-status:read`          | [Civil status](../conceptual_model/civil-status.md)
+| identity           | `urn:cms:identity:read`              | [Identity](../conceptual_model/identity.md)
 | favorites             | `urn:cms:favorites:read`             | [Favorites](../conceptual_model/favorites.md)
 | drivingLicence        | `urn:cms:driving-licence:read`       | [Driving Licence](../conceptual_model/driving-licence.md)
 | ICE                   | `urn:cms:ice-contacts:read`          | [In Case Of Emergency contacts](../conceptual_model/in-case-of-emergency-contacts.md)

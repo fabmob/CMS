@@ -28,7 +28,7 @@ Main Entities
 -------------
 
 - [Personal Information](personal-information.md)
-- [Civil status](civil-status.md)
+- [Identity](identity.md)
 - [Favorites](favorites.md)
 - [Driving Licence](driving-licence.md)
 - [ICE Contacts](in-case-of-emergency-contacts.md)

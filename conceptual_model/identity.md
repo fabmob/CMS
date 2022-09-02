@@ -1,7 +1,7 @@
-Civil Status
+Identity
 ============
 
-[JSON Schema](schemas/civil-status.schema.json)
+[JSON Schema](schemas/identity.schema.json)
 
 
 Attributes
