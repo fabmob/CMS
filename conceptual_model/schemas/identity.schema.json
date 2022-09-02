@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "civil-status.schema.json",
-  "title": "Personal Civil Status",
-  "description": "A person's civil status",
+  "$id": "identity.schema.json",
+  "title": "Personal Identity",
+  "description": "A person's identity",
   "type": "object",
   "properties": {
     "lastName": {
@@ -14,12 +14,10 @@
       "$ref": "#/$defs/string_field"
     },
     "middleNames": {
-      "$comment": "TODO: check if this is the right model",
       "description": "The person's middle names, separated by spaces",
       "$ref": "#/$defs/string_field"
     },
     "gender": {
-      "$comment": "TODO: validate if it is the right standard to use",
       "description": "The person's gender",
       "$ref": "#/$defs/gender_field"
     },
