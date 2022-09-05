@@ -34,7 +34,7 @@ Des évolutions continues du standard sont prévues, notamment à l’automne 20
 Gouvernance
 ----------
 
-Voir [Gouvernance du groupe de travail CMS](Gouvernance_du_GT_Compte_Mobilite_Standardise-CMS.pdf)
+Voir [Gouvernance du groupe de travail CMS](Gouvernance_du_GT_Compte_Mobilite_Standardise-CMS.fr.md)
 
 
 Ressources

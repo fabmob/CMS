@@ -28,7 +28,7 @@ CMS standard leverages OpenIDConnect for SSO purposes and specifies scopes to be
 Governance
 ----------
 
-See [CMS Work Group Governance](Gouvernance_du_GT_Compte_Mobilite_Standardise-CMS.pdf)
+See [CMS Work Group Governance](Gouvernance_du_GT_Compte_Mobilite_Standardise-CMS.fr.md)
 
 
 Resources
