@@ -126,7 +126,7 @@
           },
           "$comment": "At least first line is expected to be filled",
           "required": [
-            "line1"
+            "line6"
           ],
           "additionalProperties": false
         },
