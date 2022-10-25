@@ -124,9 +124,9 @@
               "maxLength": 38
             }
           },
-          "$comment": "At least first line is expected to be filled",
+          "$comment": "At least the country line is expected to be filled",
           "required": [
-            "line6"
+            "line7"
           ],
           "additionalProperties": false
         },
