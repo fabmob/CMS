@@ -62,9 +62,10 @@ Rough implementation of the AFNOR NF Z 10-011 standard
 | line3             | string   | no       | max 38 characters
 | line4             | string   | no       | max 38 characters
 | line5             | string   | no       | max 38 characters
-| line6             | string   | yes      | max 38 characters
+| line6             | string   | no       | max 38 characters
+| line7             | string   | yes      | max 38 characters
 | source            | string   | no       | any
-| certificationDate | dstring  | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+| certificationDate | string   | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
 
 ### Phone number field
