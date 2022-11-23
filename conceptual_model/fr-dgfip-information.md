@@ -16,7 +16,7 @@ Attributes
 | -----------------------|----------
 | declarant1             | [DGFIP identity](#dgfip-identity)
 | declarant2             | [DGFIP identity](#dgfip-identity)
-| taxNotices             | [DGFIP tax notice](#dgfip-tax-notice)
+| taxNotices             | Array of [DGFIP tax notice](#dgfip-tax-notice)
 
 
 Definitions
