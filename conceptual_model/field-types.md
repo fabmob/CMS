@@ -37,10 +37,17 @@
 
 | Name              | Type     | Required | Format
 | ------------------|----------|----------|---------------------------------
-| value             | string   | yes      | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+| value             | string   | yes      | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) ▶️ YYYY-MM-DD
 | source            | string   | no       | any
 | certificationDate | string   | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
+### Datetime field
+
+| Name              | Type     | Required | Format
+| ------------------|----------|----------|---------------------------------
+| value             | string   | yes      | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) ▶️ YYYY-MM-DDThh:mm:ss
+| source            | string   | no       | any
+| certificationDate | string   | no       | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
 ### Email field
 
